@@ -1,6 +1,9 @@
 # Compiled Lua sources
 luac.out
 
+#Ignore local vscode config
+.vscode
+
 # luarocks build files
 *.src.rock
 *.zip
