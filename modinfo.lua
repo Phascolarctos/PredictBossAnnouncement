@@ -11,39 +11,20 @@ all_clients_require_mod = true
 api_version = 10
 configuration_options = {
     {
-        name = "language",
-        hover = "default zh-s",
-        options = { {
-            description = "Chinese (Simplified)",
-            hover = "zh",
-            data = true
-        }, {
-            description = "English",
-            hover = "en",
-            data = false
-        } },
-        default = true
-    },
-    {
         name = "radius",
-        hover = "10",
+        hover = "查找半径",
         options = {
             {
-                description = "10",
-                hover = "10",
-                data = 10
+                description = "35",
+                hover = "冰眼结晶器",
+                data = 35
             },
             {
-                description = "15",
-                hover = "15",
-                data = 15
-            },
-            {
-                description = "20",
-                hover = "20",
-                data = 20
+                description = "45",
+                hover = "cpu咆哮半径",
+                data = 45
             }
         },
-        default = 10
+        default = 35
     }
 }
