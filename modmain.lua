@@ -78,11 +78,13 @@ AddPrefabPostInitAny(function(inst)
         return
     end
     if name ~= "MISSING NAME" then
-        _The_Net:Announce(name .. "正在生成中......")
+        if inst:HasTag("monster") then
+            _The_Net:Announce(name .. "正在逼近......")
+        end
     end
     local ents = FindBoss(inst, tagName)
     if ents == nil then
         return
     end
-    _The_Net:Announce(tagName .. "正在生成中......")
+    _The_Net:Announce(name .. "正在逼近......")
 end)
