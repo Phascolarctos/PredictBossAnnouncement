@@ -34,6 +34,8 @@ local TagNames = {
     "spiderqueen",
     "malbatross",
     "spat",
+    "spider",
+    "spiderqueen",
     "minotaur",
     "daywalker",
     "daywalker2",
@@ -77,14 +79,9 @@ AddPrefabPostInitAny(function(inst)
     if name == nil then
         return
     end
-    if name ~= "MISSING NAME" then
-        if inst:HasTag("monster") then
-            _The_Net:Announce(name .. "正在逼近......")
-        end
+    local IsMonster = inst:HasTag("monster")
+    local IsLargeCreature = inst:HasTag("largecreature")
+    if IsMonster or IsLargeCreature then
+        _The_Net:Announce(name .. "正从四面八方逼近...")
     end
-    local ents = FindBoss(inst, tagName)
-    if ents == nil then
-        return
-    end
-    _The_Net:Announce(name .. "正在逼近......")
 end)
